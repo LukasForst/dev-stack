@@ -38,6 +38,8 @@ docker pull	jlesage/jdownloader-2
 docker run -it -v $(pwd)/client:/client -w /client node:10-alpine /bin/ash -c "npm install; npm run build-prod;" 
 ```
 ### JDownloader
+Popular downloader running inside Docker. To access the program, go to http://localhost:5800 (if running on localhost).
+
 ```bash
 isRunning=`docker inspect -f {{.State.Running}} jdownloader-2`
 downloadDir="~/Downloads"
@@ -62,6 +64,8 @@ xdg-open http://localhost:5800/ &
 ```
 
 ### OneDrive
+Script for starting up and using the OneDrive cloud from the Docker.
+It synchronizes files from the OneDrive with local folder.
 ```bash
 # Update onedriveDir with correct existing OneDrive directory path
 isRunning=`docker inspect -f {{.State.Running}} onedrive`

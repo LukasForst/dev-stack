@@ -1,4 +1,5 @@
 ### Revert last commit
+Remove last commit but leave the files in the same state.
 ```bash
 # reset to last change in head
 git reset HEAD~
@@ -11,6 +12,8 @@ git commit -c ORIG_HEAD
 ```
 
 ### Remove files that are in gitignore
+Removes all files, that were commit to the git, but then added to the `.gitignore` file.
+
 NOTE: everything will be removed, commit your changes
 
 ```bash
@@ -25,6 +28,10 @@ git push
 ```
 
 ### Parse Jira task from branch and add to commit
+The hook will take Jira (or any other issue tracker) task number from the branch and put it into the commit message. So from the branch `TAS-123-cool-feature-done` and the commit message written by user `another hack used` will create `TAS-123 another hack used`. This is very useful when you would like to track which commit belongs to which task.
+
+The snippet is configured directly for the Jira, but with slight modification of the regexes, it can be used for any other task tracker.
+
 Put following code into `.git/hooks/commit-msg` and make it executable via  `chmod +x .git/hooks/commit-msg`
 ```bash
 # Add git branch if relevant
