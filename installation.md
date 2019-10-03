@@ -7,7 +7,7 @@
   * XFCE drop down terminal `xfce4-terminal --drop-down`
 * VLC
 * JetBrains Toolbox
-* Opera
+* Opera + Firefox + Chromium
 * LibreOffice - `libreoffice-still`
 * vmtouch - adds files to ram
 * Spotify
