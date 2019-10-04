@@ -16,6 +16,14 @@
 * Gradle
 * Maven
 
+### OpenVPN
+Support for XFCE4 running on Manjaro, but probably will work on other systems as well. Using following tool https://wiki.archlinux.org/index.php/Networkmanager-openvpn (installed by default on XFCE since it is its default Network manager).
+```bash
+nmcli connection import type openvpn file <my.file>.ovpn
+```
+
+It adds the connection to the network manager, then one must enable it by clicking on it.
+
 ### Mini Greeter
 `lightdm-mini-greeter` - lightweight lightdm lock screen, also it fixed not showing lightdm after sleep.
 
