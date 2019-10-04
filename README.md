@@ -8,3 +8,4 @@ Collection of tricks and code snippets I'm using in my daily life.
 * [Python](python.md) - installation of Python, SciPy and other packages
 * [Kotlin](kotlin.md) - useful libraries, hacks and other Kotlin related things
 * [Gradle](gradle.md) - some code snippets, tricks and hacks that I had to wrote, because I didn't find them on the internet
+* [Jetbrains](jetbrains.md) - tweaks for Jetbrains IDEs

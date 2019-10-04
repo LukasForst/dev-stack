@@ -1,6 +1,5 @@
 ## Applications
 * keepass - https://keepassxc.org/
-* lightdm-mini-greeter - cool lightdm lock screen, also it fixed not showing lightdm after sleep
 * drop down terminal 
   * tilda  https://github.com/lanoxx/tilda
   * guake
@@ -16,6 +15,21 @@
 * Kotlin Script
 * Gradle
 * Maven
+
+### Mini Greeter
+`lightdm-mini-greeter` - lightweight lightdm lock screen, also it fixed not showing lightdm after sleep.
+
+Greeter requires minimal configuration - at least to set current user, which should be logged in when the password is entered.
+The configuration is stored in the `/etc/lightdm/lightdm-mini-greeter.conf`.
+```
+user = lukas
+```
+
+To enable greeter one must set `greeter-session` in the file `/etc/lightdm/lightdm.conf` in a following way:
+```
+greeter-session=lightdm-mini-greeter
+```
+
 
 ### Albert
 Configuration
