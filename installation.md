@@ -180,3 +180,12 @@ gacp() {
 	git add . && git commit -m "${1}" && git push
 }
 ```
+
+## Fuckups
+
+### Arc Mouse problems
+* install `bluez-git` package to enable scroll
+* perform these steps https://bbs.archlinux.org/viewtopic.php?pid=1860951#p1860951 to enable smooth movement
+  * untrust the device
+  * `echo 6 > /sys/kernel/debug/bluetooth/hci0/conn_min_interval` as sudo
+  * trust the mous
