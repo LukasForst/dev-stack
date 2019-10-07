@@ -170,3 +170,15 @@ alias notes='code ~/OneDrive/Documents/notes'
 alias py='python3'
 alias save-aliases='cp -r ~/.zshrc ~/OneDrive/useful'
 ```
+
+#### Bash functions
+Almost same as aliases, although they support arguments.
+```bash
+jira() { firefox "https://blindspot-solutions.atlassian.net/browse/${1}" };
+
+gacp() {
+	git add .
+	git commit -m "${1}"
+	git push
+}
+```
