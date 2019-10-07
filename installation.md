@@ -177,8 +177,6 @@ Almost same as aliases, although they support arguments.
 jira() { firefox "https://blindspot-solutions.atlassian.net/browse/${1}" };
 
 gacp() {
-	git add .
-	git commit -m "${1}"
-	git push
+	git add . && git commit -m "${1}" && git push
 }
 ```
