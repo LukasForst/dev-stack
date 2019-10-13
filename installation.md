@@ -169,12 +169,73 @@ alias size='du -sh'
 alias notes='code ~/OneDrive/Documents/notes'
 alias py='python3'
 alias save-aliases='cp -r ~/.zshrc ~/OneDrive/useful'
+
+alias temp="sensors | grep "Core""
+alias fan-log="journalctl -n 20 -u thinkfan.service"
+alias fan-stat="systemctl status thinkfan.service"
+alias fan-edit="sudo subl3 /etc/thinkfan.conf"
 ```
 
 #### Bash functions
 Almost same as aliases, although they support arguments.
 ```bash
+# Opens BSS Jira in the firefox
 jira() { firefox "https://blindspot-solutions.atlassian.net/browse/${1}" };
+
+# Git add commit and push at once
+gacp() {
+	git add . && git commit -m "${1}" && git push
+}
+
+# Opens file with default application
+open() { xdg-open "${1}" 2> /dev/null > /dev/null };
+```
+
+#### Zshrc config
+```bash
+
+xset -b
+
+alias code=codium
+
+alias subl=subl3
+alias work='cd ~/work'
+alias tasp='cd ~/work/tasp'
+alias paas='cd ~/work/tasp/paas'
+alias capa='cd ~/work/capa'
+alias ktoolz='cd ~/work/ktoolz'
+
+alias school='cd ~/OneDrive/School/ing/1st'
+alias onedrive='cd ~/OneDrive'
+alias docs='cd ~/OneDrive/Documents'
+alias pics='cd ~/OneDrive/Pictures'
+
+alias open='xdg-open'
+
+alias jdownloader='~/.local/share/jdownloader.sh'
+alias onedrive='~/.local/share/onedrive.sh'
+alias onedrive-logs='docker logs --follow --since 5m onedrive'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias battery=acpi
+alias pingg='ping google.com'
+alias tmp='cd /tmp'
+alias dops='docker ps'
+alias cache-stats='vmtouch "`pwd`"'
+alias cache='sudo vmtouch -dl "`pwd`"'
+alias aliases='subl ~/.zshrc'
+alias size='du -sh'
+alias notes='code ~/OneDrive/Documents/notes'
+alias py='python3'
+alias save-aliases='cp -r ~/.zshrc ~/OneDrive/useful'
+
+alias temp="sensors | grep "Core""
+alias fan-log="journalctl -n 20 -u thinkfan.service"
+alias fan-stat="systemctl status thinkfan.service"
+alias fan-edit="sudo subl3 /etc/thinkfan.conf"
+
+jira() { 
+  firefox "https://blindspot-solutions.atlassian.net/browse/${1}" 
+}
 
 gacp() {
 	git add . && git commit -m "${1}" && git push
